@@ -99,7 +99,7 @@ router.get("/stream/play", async (req, res) => {
     }
     else {
       res.status(200).json({
-        url: `https://player.nscdn.ml/player.html?p=${base64encode('&file=' + hls.sources[0].file)}`,
+        url: hls.sources[0].file,
         id: id.split("-episode-")[0],
         episode: id.split("-episode-")[1]
       })
