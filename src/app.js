@@ -18,11 +18,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
   res.json({
-    message: '🦄🌈✨👋🌎🌍🌏✨🌈🦄'
-  });
+    message: 'Powered By Vercel',
+    status: 'OK',
+    endpoint : '/api'
+  })
 });
 
-app.use('/api/v1', api);
+app.use('/api', api);
 
 app.use(middlewares);
 
